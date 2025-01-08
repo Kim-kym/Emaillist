@@ -20,6 +20,16 @@ list = (List<EmailVo>)request.getAttribute("list");
 	rel="stylesheet" 
 	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
 	crossorigin="anonymous">
+<script>
+function confirm_delete(no) {
+	let result = confirm("정말 삭제하시겠습니까?");
+	
+	if (result) {
+		document.location.href = 
+			"<%= request.getContextPath() %>/el?a=delete&no"
+	}
+}
+</script>
 </head>
 <body>
     <div class="container">
